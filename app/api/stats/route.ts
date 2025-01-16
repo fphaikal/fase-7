@@ -1,5 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextResponse } from 'next/server';
 
+// Statistik global
 let visitorCount = 0;
 const deviceCounts: Record<string, number> = {
   mobile: 0,
@@ -8,30 +9,27 @@ const deviceCounts: Record<string, number> = {
   other: 0,
 };
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
-    // Update visitor count and device count
-    visitorCount += 1;
+// Handler untuk POST
+export async function POST(request: Request) {
+  const userAgent = request.headers.get('user-agent') || '';
+  const isMobile = /Mobile|Android|iP(hone|od)/i.test(userAgent);
+  const isTablet = /Tablet|iPad/i.test(userAgent);
+  const isDesktop = !isMobile && !isTablet;
 
-    const userAgent = req.headers['user-agent'] || '';
-    const isMobile = /Mobile|Android|iP(hone|od)/i.test(userAgent);
-    const isTablet = /Tablet|iPad/i.test(userAgent);
-    const isDesktop = !isMobile && !isTablet;
+  visitorCount += 1;
 
-    if (isMobile) deviceCounts.mobile += 1;
-    else if (isTablet) deviceCounts.tablet += 1;
-    else if (isDesktop) deviceCounts.desktop += 1;
-    else deviceCounts.other += 1;
+  if (isMobile) deviceCounts.mobile += 1;
+  else if (isTablet) deviceCounts.tablet += 1;
+  else if (isDesktop) deviceCounts.desktop += 1;
+  else deviceCounts.other += 1;
 
-    res.status(200).json({ message: 'Visitor count updated!' });
-  } else if (req.method === 'GET') {
-    // Return visitor statistics
-    res.status(200).json({
-      visitorCount,
-      deviceCounts,
-    });
-  } else {
-    res.setHeader('Allow', ['GET', 'POST']);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
-  }
+  return NextResponse.json({ message: 'Visitor count updated!' });
+}
+
+// Handler untuk GET
+export async function GET() {
+  return NextResponse.json({
+    visitorCount,
+    deviceCounts,
+  });
 }
