@@ -96,7 +96,7 @@ const companyStages = [
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4">
-      <div className="flex flex-col w-full h-screen items-center justify-center gap-4">
+      <div className="flex flex-col w-full min-h-screen items-center justify-center gap-4">
         <motion.div
           initial={{ opacity: 0.0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
