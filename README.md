@@ -1,6 +1,6 @@
-# ReDesgin Landing Page Website FASE#7 (Festival Anak Sholeh)
+# ReDesign Landing Page Website FASE#7 (Festival Anak Sholeh)
 
-Proyek ini ditujukan untuk melakukan perbaikan UI pada landing page FASE#7 agar terlihat lebih menarik
+This project is aimed at improving the UI on the landing page of FASE#7 to make it look more attractive.
 
 ## Technologies Used
 
