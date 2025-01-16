@@ -21,18 +21,6 @@ export const siteConfig = {
     },
     {
       label: "About",
-      href: "/docs",
-    },
-    {
-      label: "Lomba",
-      href: "/pricing",
-    },
-    {
-      label: "Juknis",
-      href: "/blog",
-    },
-    {
-      label: "Daftar",
       href: "/about",
     },
   ],
