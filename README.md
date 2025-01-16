@@ -1,8 +1,6 @@
-# Next.js & NextUI Template
+# ReDesgin Landing Page Website FASE#7 (Festival Anak Sholeh)
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
-
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+Proyek ini ditujukan untuk melakukan perbaikan UI pada landing page FASE#7 agar terlihat lebih menarik
 
 ## Technologies Used
 
@@ -18,10 +16,8 @@ This is a template for creating applications using Next.js 14 (app directory) an
 
 ### Use the template with create-next-app
 
-To create a new project based on this template using `create-next-app`, run the following command:
-
 ```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+git clone https://github.com/fphaikal/fase-7.git
 ```
 
 ### Install dependencies
