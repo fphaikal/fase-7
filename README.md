@@ -1,4 +1,4 @@
-# ReDesign Landing Page Website FASE#7 (Festival Anak Sholeh)
+# ReDecoding Landing Page Website FASE#7 (Festival Anak Sholeh)
 
 This project is aimed at improving the UI on the landing page of FASE#7 to make it look more attractive.
 
@@ -14,7 +14,7 @@ This project is aimed at improving the UI on the landing page of FASE#7 to make 
 
 ## How to Use
 
-### Use the template with create-next-app
+### Clone this project
 
 ```bash
 git clone https://github.com/fphaikal/fase-7.git
